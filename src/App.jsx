@@ -21,6 +21,7 @@ function reducer(state, action) {
       };
 
     case "loan":
+      if (state.loan > 0) return null;
       return {
         ...state,
         balance: state.balance + 5000,
